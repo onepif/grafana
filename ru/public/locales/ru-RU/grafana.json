@@ -1,9 +1,9 @@
 {
-  "_comment": "This file is the source of truth for English strings. Edit this in the codebase to change plurals and other phrases for the UI.",
+  "_comment": "Этот файл является источником истины для русских строк. Отредактируйте его, чтобы изменить множественное числа и другие фразы для пользовательского интерфейса.",
   "access-control": {
     "add-permission": {
       "role-label": "Роль",
-      "serviceaccount-label": "Service Account",
+      "serviceaccount-label": "Сервисная учётная запись",
       "team-label": "Команда",
       "title": "Добавить разрешение для",
       "user-label": "Пользователь"
@@ -19,14 +19,14 @@
       "no-permissions": "Нет прав доступа",
       "permissions-change-warning": "Это изменит права доступа для этой папки и всех её потомков. Это повлияет:",
       "role": "Роль",
-      "serviceaccount": "Service Account",
+      "serviceaccount": "Сервисная учётная запись",
       "team": "Команда",
       "title": "Права доступа",
       "user": "Пользователь"
     }
   },
   "bouncing-loader": {
-    "label": "Loading"
+    "label": "Загрузка"
   },
   "browse-dashboards": {
     "action": {
@@ -48,23 +48,23 @@
       "new-folder-name-required-phrase": "Укажите имя папки."
     },
     "counts": {
-      "alertRule_one": "{{count}} alert rule",
-      "alertRule_other": "{{count}} alert rules",
-      "dashboard_one": "{{count}} dashboard",
-      "dashboard_other": "{{count}} dashboards",
-      "folder_one": "{{count}} folder",
-      "folder_other": "{{count}} folders",
-      "libraryPanel_one": "{{count}} library panel",
-      "libraryPanel_other": "{{count}} library panels",
-      "total_one": "{{count}} item",
-      "total_other": "{{count}} items"
+      "alertRule_one": "{{count}} правило оповещения",
+      "alertRule_other": "{{count}} Правила оповещений",
+      "dashboard_one": "{{count}} информационная панель",
+      "dashboard_other": "{{count}} информационные панели",
+      "folder_one": "{{count}} папка",
+      "folder_other": "{{count}} папки",
+      "libraryPanel_one": "{{count}} панель библиотеки",
+      "libraryPanel_other": "{{count}} панели библиотеки",
+      "total_one": "{{count}} элемент",
+      "total_other": "{{count}} элементы"
     },
     "dashboards-tree": {
-      "collapse-folder-button": "Collapse folder {{title}}",
-      "expand-folder-button": "Expand folder {{title}}",
+      "collapse-folder-button": "Скрыть папку {{title}}",
+      "expand-folder-button": "Раскрыть папку {{title}}",
       "name-column": "Имя",
-      "select-all-header-checkbox": "Select all",
-      "select-checkbox": "Select",
+      "select-all-header-checkbox": "Выбрать все",
+      "select-checkbox": "Выбрать",
       "tags-column": "Теги"
     },
     "folder-actions-button": {
@@ -76,7 +76,7 @@
     "folder-picker": {
       "accessible-label": "Выберите папку: {{ label }} сейчас выбрано",
       "button-label": "Выбрать папку",
-      "clear-selection": "Clear selection",
+      "clear-selection": "Очистить выделение",
       "empty-message": "Папки не найдены",
       "error-title": "Ошибка чтения папок",
       "search-placeholder": "Поиск по папке",
@@ -138,50 +138,50 @@
     }
   },
   "correlations": {
-    "add-new": "Add new",
+    "add-new": "Добавить новый",
     "alert": {
       "error-message": "An unknown error occurred while fetching correlation data. Please try again.",
       "title": "Error fetching correlation data"
     },
     "basic-info-form": {
       "description-description": "Optional description with more information about the link",
-      "description-label": "Description",
-      "label-description": "This name will be used as the label for the correlation. This will show as button text, a menu item, or hover text on a link.",
-      "label-label": "Label",
+      "description-label": "Описание",
+      "label-description": "Это название будет использоваться в качестве метки для корреляции. Оно будет отображаться как текст кнопки, элемент меню или текст ссылки при наведении.",
+      "label-label": "Ярлык",
       "label-placeholder": "e.g. Tempo traces",
-      "label-required": "This field is required.",
+      "label-required": "Это поле обязательно.",
       "sub-text": "<0>Define text that will describe the correlation.</0>",
       "title": "Define correlation label (Step 1 of 3)"
     },
     "list": {
       "delete": "delete correlation",
-      "label": "Label",
-      "loading": "loading...",
-      "read-only": "Read only",
-      "source": "Source",
-      "target": "Target"
+      "label": "Метка",
+      "loading": "загрузка...",
+      "read-only": "Только для чтения",
+      "source": "Источник",
+      "target": "Место назначения"
     },
     "navigation-form": {
-      "add-button": "Add",
-      "back-button": "Back",
-      "next-button": "Next",
-      "save-button": "Save"
+      "add-button": "Добавить",
+      "back-button": "Назад",
+      "next-button": "Далее",
+      "save-button": "Сохранить"
     },
     "page-content": "To enable Correlations, add it in the Grafana config:",
     "page-heading": "Correlations are disabled",
     "query-editor": {
       "control-rules": "The selected target data source must export a query editor.",
-      "data-source-text": "Please select a target data source first.",
-      "data-source-title": "No data source selected",
-      "error-text": "The selected data source could not be loaded.",
-      "error-title": "Error loading data source",
-      "loading": "Loading query editor...",
-      "query-description": "Define the query that is run when the link is clicked. You can use <2>variables</2> to access specific field values.",
+      "data-source-text": "Пожалуйста, сначала выберите источник данных.",
+      "data-source-title": "Не выбран источник данных",
+      "error-text": "Выбранный источник данных не может быть загружен.",
+      "error-title": "Ошибка загрузки исходных данных",
+      "loading": "Загрузить редактор запросов...",
+      "query-description": "Определяет запрос, который запускается при нажатии на ссылку. Вы можете использовать <2>переменные</2> для доступа к определённым полю значений.",
       "query-editor-title": "Data source does not export a query editor.",
-      "query-label": "Query"
+      "query-label": "Запрос"
     },
     "source-form": {
-      "control-required": "This field is required.",
+      "control-required": "Это поле обязательно.",
       "description": "You have used following variables in the target query: <1></1><2></2>A data point needs to provide values to all variables as fields or as transformations output to make the correlation button appear in the visualization.<4></4>Note: Not every variable needs to be explicitly defined below. A transformation such as <7>logfmt</7> will create variables for every key/value pair.",
       "heading": "Variables used in the target query",
       "results-description": "The link will be shown next to the value of this field",
@@ -309,7 +309,7 @@
     },
     "toolbar": {
       "add": "Добавить",
-      "alert-rules": "Alert rules",
+      "alert-rules": "Правила оповещений",
       "mark-favorite": "Добавить в избранное",
       "open-original": "Открыть исходную информационную панель",
       "playlist-next": "Перейти к следующей информационной панели",
@@ -318,13 +318,13 @@
       "refresh": "Обновить информационную панель",
       "save": "Сохранить информационную панель",
       "settings": "Настройки панели мониторинга",
-      "share": "Share dashboard",
-      "share-button": "Share",
+      "share": "Поделиться информационной панелью",
+      "share-button": "Поделиться",
       "unmark-favorite": "Убрать из избранного"
     },
     "validation": {
       "invalid-dashboard-id": "Could not find a valid Grafana.com ID",
-      "invalid-json": "Not valid JSON",
+      "invalid-json": "Некорректный JSON",
       "tags-expected-array": "tags expected array",
       "tags-expected-strings": "tags expected array of strings"
     }
@@ -335,13 +335,13 @@
       "secondary-text": "Drag and drop here or click to browse"
     },
     "form-actions": {
-      "cancel": "Cancel",
-      "load": "Load"
+      "cancel": "Отмена",
+      "load": "Загрузить"
     },
     "gcom-field": {
       "label": "Find and import dashboards for common applications at <1></1>",
-      "load-button": "Load",
-      "placeholder": "Grafana.com dashboard URL or ID",
+      "load-button": "Загрузить",
+      "placeholder": "URL или ID информационной панели Grafana.com",
       "validation-required": "A Grafana dashboard URL or ID is required"
     },
     "json-field": {
@@ -351,57 +351,57 @@
   },
   "dashboard-settings": {
     "annotations": {
-      "title": "Annotations"
+      "title": "Аннотации"
     },
-    "dashboard-delete-button": "Delete Dashboard",
+    "dashboard-delete-button": "Удалить информационную панель",
     "general": {
       "auto-refresh-description": "Define the auto refresh intervals that should be available in the auto refresh list.",
-      "auto-refresh-label": "Auto refresh",
-      "description-label": "Description",
+      "auto-refresh-label": "Автообновление",
+      "description-label": "Описание",
       "editable-description": "Set to read-only to disable all editing. Reload the dashboard for changes to take effect",
-      "editable-label": "Editable",
-      "folder-label": "Folder",
+      "editable-label": "Редактирование",
+      "folder-label": "Папка",
       "panel-options-graph-tooltip-description": "Controls tooltip and hover highlight behavior across different panels. Reload the dashboard for changes to take effect",
       "panel-options-graph-tooltip-label": "Graph tooltip",
-      "panel-options-label": "Panel options",
-      "tags-label": "Tags",
-      "title": "General",
-      "title-label": "Title"
+      "panel-options-label": "Настройки панели",
+      "tags-label": "Теги",
+      "title": "Общее",
+      "title-label": "Заголовок()"
     },
     "json-editor": {
-      "apply-button": "Apply changes",
-      "save-button": "Save changes",
+      "apply-button": "Применить изменения",
+      "save-button": "Сохранить изменения",
       "subtitle": "The JSON model below is the data structure that defines the dashboard. This includes dashboard settings, panel settings, layout, queries, and so on.",
-      "title": "JSON Model"
+      "title": "Модель JSON"
     },
     "links": {
-      "title": "Links"
+      "title": "Ссылки"
     },
     "permissions": {
-      "title": "Permissions"
+      "title": "Права доступа"
     },
     "settings": {
-      "title": "Settings"
+      "title": "Настройки"
     },
     "time-picker": {
-      "hide-time-picker": "Hide time picker",
+      "hide-time-picker": "Выбор даты и времени",
       "now-delay-description": "Exclude recent data that may be incomplete.",
-      "now-delay-label": "Now delay",
+      "now-delay-label": "Задержка в текущий момент",
       "refresh-live-dashboards-description": "Continuously re-draw panels where the time range references 'now'",
-      "refresh-live-dashboards-label": "Refresh live dashboards",
-      "time-options-label": "Time options",
-      "time-zone-label": "Time zone",
-      "week-start-label": "Week start"
+      "refresh-live-dashboards-label": "Обновить текущие информационные панели",
+      "time-options-label": "Настройка времени",
+      "time-zone-label": "Часовой пояс",
+      "week-start-label": "Начало недели"
     },
     "variables": {
-      "title": "Variables"
+      "title": "Переменные"
     },
     "versions": {
-      "title": "Versions"
+      "title": "Версии"
     }
   },
   "data-source-picker": {
-    "add-new-data-source": "Configure a new data source",
+    "add-new-data-source": "Настроить новый источник данных",
     "built-in-list": {
       "description-dashboard": "Reuse query results from other visualizations",
       "description-grafana": "Discover visualizations using mock data",
@@ -450,70 +450,70 @@
       "delete-starred-query-confirmation-text": "Are you sure you want to permanently delete your starred query?",
       "edit-comment-tooltip": "Edit comment",
       "loading-text": "loading...",
-      "optional-description": "An optional description of what the query does.",
-      "query-comment-label": "Query comment",
-      "query-text-label": "Query text",
-      "run-query-button": "Run query",
-      "save-comment": "Save comment",
-      "star-query-tooltip": "Star query",
-      "switch-datasource-button": "Switch data source and run query",
-      "unstar-query-tooltip": "Unstar query",
-      "update-comment-form": "Update comment form"
+      "optional-description": "Дополнительное описание действий запроса.",
+      "query-comment-label": "Запрос комментария",
+      "query-text-label": "Запрос текста",
+      "run-query-button": "Выполнить запрос",
+      "save-comment": "Сохранить комментарий",
+      "star-query-tooltip": "Добавить запрос в Избранное",
+      "switch-datasource-button": "Переключить источник данных и выполнить запрос",
+      "unstar-query-tooltip": "Убрать запрос из Избранного",
+      "update-comment-form": "Изменить форму комментария"
     },
     "rich-history-container": {
-      "loading": "Loading..."
+      "loading": "Загрузка..."
     },
     "rich-history-notification": {
-      "query-copied": "Query copied to clipboard",
-      "query-deleted": "Query deleted"
+      "query-copied": "Запрос скопирован в буфер обмена",
+      "query-deleted": "Запрос удален"
     },
     "rich-history-queries-tab": {
-      "displaying-partial-queries": "Displaying {{ count }} queries",
-      "displaying-queries": "{{ count }} queries",
-      "filter-aria-label": "Filter queries for data sources(s)",
-      "filter-history": "Filter history",
-      "filter-placeholder": "Filter queries for data sources(s)",
-      "history-local": "The history is local to your browser and is not shared with others.",
-      "loading": "Loading...",
-      "loading-results": "Loading results...",
-      "search-placeholder": "Search queries",
-      "showing-queries": "Showing {{ shown }} of {{ total }} <0>Load more</0>",
-      "sort-aria-label": "Sort queries",
-      "sort-placeholder": "Sort queries by"
+      "displaying-partial-queries": "Отображаются запросы {{ count }}",
+      "displaying-queries": "{{ count }} запросов",
+      "filter-aria-label": "Фильтровать запросы к источнику(ам) данных",
+      "filter-history": "Фильтр истории",
+      "filter-placeholder": "Фильтровать запросы к источнику(ам) данных",
+      "history-local": "История локальна для вашего браузера и не передается другим пользователям.",
+      "loading": "Загрузка...",
+      "loading-results": "Загрузка результатов...",
+      "search-placeholder": "Поиск запросов",
+      "showing-queries": "Показаны {{ shown }} из {{ total }} <0>Загрузить больше</0>",
+      "sort-aria-label": "Сортировать запросы",
+      "sort-placeholder": "Сортировать запросы по"
     },
     "rich-history-settings-tab": {
-      "alert-info": "Grafana will keep entries up to {{optionLabel}}.Starred entries won't be deleted.",
-      "change-default-tab": "Change the default active tab from “Query history” to “Starred”",
-      "clear-history-info": "Delete all of your query history, permanently.",
-      "clear-query-history": "Clear query history",
-      "clear-query-history-button": "Clear query history",
-      "delete-confirm": "Delete",
-      "delete-confirm-text": "Are you sure you want to permanently delete your query history?",
-      "delete-title": "Delete",
-      "history-time-span": "History time span",
+      "alert-info": "Grafana хранит записи до {{optionLabel}}. Избранные записи не будут удалены.",
+      "change-default-tab": "Изменить вкладку по умолчанию с «История запросов» на «Избранное»",
+      "clear-history-info": "Навсегда удалить всю историю запросов.",
+      "clear-query-history": "Очистить историю запросов",
+      "clear-query-history-button": "Очистить историю запросов",
+      "delete-confirm": "Удалить",
+      "delete-confirm-text": "Вы уверены, что хотите навсегда удалить эту историю?",
+      "delete-title": "Удалить",
+      "history-time-span": "Временной интервал истории",
       "history-time-span-description": "Select the period of time for which Grafana will save your query history. Up to {{MAX_HISTORY_ITEMS}} entries will be stored.",
       "only-show-active-datasource": "Only show queries for data source currently active in Explore",
-      "query-history-deleted": "Query history deleted",
+      "query-history-deleted": "История запросов удалена",
       "retention-period": {
-        "1-week": "1 week",
-        "2-days": "2 days",
-        "2-weeks": "2 weeks",
-        "5-days": "5 days"
+        "1-week": "1 неделя",
+        "2-days": "2 дня",
+        "2-weeks": "2 недели",
+        "5-days": "5 дней"
       }
     },
     "rich-history-starred-tab": {
-      "filter-queries-aria-label": "Filter queries for data sources(s)",
-      "filter-queries-placeholder": "Filter queries for data sources(s)",
-      "loading": "Loading...",
-      "loading-results": "Loading results...",
-      "local-history-message": "The history is local to your browser and is not shared with others.",
-      "search-queries-placeholder": "Search queries",
-      "showing-queries": "Showing {{ shown }} of {{ total }} <0>Load more</0>",
-      "sort-queries-aria-label": "Sort queries",
-      "sort-queries-placeholder": "Sort queries by"
+      "filter-queries-aria-label": "Фильтровать запросы к источнику(ам) данных",
+      "filter-queries-placeholder": "Фильтровать запросы к источнику(ам) данных",
+      "loading": "Загрузка...",
+      "loading-results": "Загрузка результатов...",
+      "local-history-message": "История локальна для вашего браузера и не передается другим пользователям.",
+      "search-queries-placeholder": "Поиск запросов",
+      "showing-queries": "Показаны {{ shown }} из {{ total }} <0>Загрузить больше</0>",
+      "sort-queries-aria-label": "Сортировать запросы",
+      "sort-queries-placeholder": "Сортировать запросы по"
     },
     "rich-history-utils": {
-      "a-week-ago": "a week ago",
+      "a-week-ago": "неделю назад",
       "days-ago": "{{num}} days ago",
       "default-from": "now-1h",
       "default-to": "now",
