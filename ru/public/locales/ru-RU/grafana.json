@@ -140,21 +140,21 @@
   "correlations": {
     "add-new": "Добавить новый",
     "alert": {
-      "error-message": "An unknown error occurred while fetching correlation data. Please try again.",
-      "title": "Error fetching correlation data"
+      "error-message": "Произошла неизвестная ошибка при получении данных корреляции. Пожалуйста, попробуйте ещё раз.",
+      "title": "Ошибка получения данных корреляции"
     },
     "basic-info-form": {
-      "description-description": "Optional description with more information about the link",
+      "description-description": "Дополнительное описание с расширенной информацией о ссылке",
       "description-label": "Описание",
       "label-description": "Это название будет использоваться в качестве метки для корреляции. Оно будет отображаться как текст кнопки, элемент меню или текст ссылки при наведении.",
       "label-label": "Ярлык",
-      "label-placeholder": "e.g. Tempo traces",
+      "label-placeholder": "например Временные треки",
       "label-required": "Это поле обязательно.",
-      "sub-text": "<0>Define text that will describe the correlation.</0>",
-      "title": "Define correlation label (Step 1 of 3)"
+      "sub-text": "<0>Определите текст, который будет описывать корреляцию.</0>",
+      "title": "Определить метку корреляции (Step 1 из 3)"
     },
     "list": {
-      "delete": "delete correlation",
+      "delete": "удалить корреляцию",
       "label": "Метка",
       "loading": "загрузка...",
       "read-only": "Только для чтения",
@@ -167,23 +167,23 @@
       "next-button": "Далее",
       "save-button": "Сохранить"
     },
-    "page-content": "To enable Correlations, add it in the Grafana config:",
-    "page-heading": "Correlations are disabled",
+    "page-content": "Для разрешения Корреляции, добавьте её в настройках:",
+    "page-heading": "Коррекции отключены",
     "query-editor": {
-      "control-rules": "The selected target data source must export a query editor.",
+      "control-rules": "Выбранный источник данных должен экспортировать редактор запроса.",
       "data-source-text": "Пожалуйста, сначала выберите источник данных.",
       "data-source-title": "Не выбран источник данных",
       "error-text": "Выбранный источник данных не может быть загружен.",
       "error-title": "Ошибка загрузки исходных данных",
       "loading": "Загрузить редактор запросов...",
       "query-description": "Определяет запрос, который запускается при нажатии на ссылку. Вы можете использовать <2>переменные</2> для доступа к определённым полю значений.",
-      "query-editor-title": "Data source does not export a query editor.",
+      "query-editor-title": "Источник данных не экспортирует редактор запросов.",
       "query-label": "Запрос"
     },
     "source-form": {
       "control-required": "Это поле обязательно.",
-      "description": "You have used following variables in the target query: <1></1><2></2>A data point needs to provide values to all variables as fields or as transformations output to make the correlation button appear in the visualization.<4></4>Note: Not every variable needs to be explicitly defined below. A transformation such as <7>logfmt</7> will create variables for every key/value pair.",
-      "heading": "Variables used in the target query",
+      "description": "Вы использовали следующие переменные в целевом запросе: <1></1><2></2></2>Точка данных должна предоставлять значения всем переменным в качестве полей или в качестве вывода преобразований для того, чтобы кнопка корреляции появилась в визуализации. 4></4>Примечание: Не каждая переменная должна быть явно определена ниже. Преобразование такого типа как <7>logfmt</7> создаст переменные для каждой пары ключей/значений.",
+      "heading": "Переменные используются в целевом запросе",
       "results-description": "The link will be shown next to the value of this field",
       "results-label": "Results field",
       "results-required": "This field is required.",
