@@ -109,7 +109,7 @@
       "light-theme": "Светлая тема"
     },
     "empty-state": {
-      "title": "No results found"
+      "title": "Нет результатов"
     },
     "search-box": {
       "placeholder": "Найти или перейти к..."
