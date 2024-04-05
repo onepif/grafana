@@ -94,7 +94,7 @@
     },
     "no-results": {
       "clear": "Очистить поиск и фильтры",
-      "text": "По запросу ничего не найдено."
+      "text": "No results found for your query"
     }
   },
   "clipboard-button": {
@@ -107,9 +107,6 @@
       "change-theme": "Сменить тему",
       "dark-theme": "Темная тема",
       "light-theme": "Светлая тема"
-    },
-    "empty-state": {
-      "title": "Нет результатов"
     },
     "search-box": {
       "placeholder": "Найти или перейти к..."
@@ -131,7 +128,8 @@
   },
   "connections": {
     "connect-data": {
-      "category-header-label": "Источники данных"
+      "category-header-label": "Источники данных",
+      "empty-message": "No results matching your query were found"
     },
     "search": {
       "placeholder": "Искать по всем"
@@ -369,7 +367,6 @@
       "title-label": "Заголовок()"
     },
     "json-editor": {
-      "apply-button": "Применить изменения",
       "save-button": "Сохранить изменения",
       "subtitle": "Модель JSON ниже - это структура данных, которая определяет информационную панель. Она включает в себя настройки информационной панели, макеты, запросы и так далее.",
       "title": "Модель JSON"
@@ -564,6 +561,9 @@
     "drawer": {
       "close": "Закрыть"
     },
+    "empty-state": {
+      "not-found-message": "No results found"
+    },
     "modal": {
       "close-tooltip": "Закрыть"
     },
@@ -651,6 +651,9 @@
     }
   },
   "library-panels": {
+    "empty-state": {
+      "message": "No library panels found"
+    },
     "modal": {
       "body_one": "Эта панель используется в панели управления {{count}}. Пожалуйста, выберите панель управления для просмотра в следующих случаях:",
       "body_other": "Эта панель используется на панели {{count}}. Пожалуйста, выберите приборную панель для просмотра панели в:",
@@ -697,9 +700,32 @@
       "link-title": "Узнайте о переносе других настроек",
       "title": "Могу ли я перенести установку в Облако Grafana?"
     },
+    "connect-modal": {
+      "body-cloud-stack": "You'll also need a cloud stack. If you just signed up, we'll automatically create your first stack. If you have an account, you'll need to select or create a stack.",
+      "body-get-started": "To get started, you'll need a Grafana.com account.",
+      "body-sign-up": "Sign up for a Grafana.com account",
+      "body-token": "Your self-managed Grafana installation needs special access to securely migrate content. You'll need to create a migration token on your chosen cloud stack.",
+      "body-token-field": "Migration token",
+      "body-token-field-placeholder": "Paste token here",
+      "body-token-instructions": "Log into your cloud stack and navigate to Administration, General, Migrate to Grafana Cloud. Create a migration token on that screen and paste the token here.",
+      "body-view-stacks": "View my cloud stacks",
+      "cancel": "Cancel",
+      "connect": "Connect to this stack",
+      "connecting": "Connecting to this stack...",
+      "title": "Connect to a cloud stack",
+      "token-required-error": "Migration token is required"
+    },
     "cta": {
       "button": "Перенести этот экземпляр в Облако",
       "header": "Позвольте нам управлять стеком Grafana"
+    },
+    "disconnect-modal": {
+      "body": "This will remove the migration token from this installation. If you wish to upload more resources in the future, you will need to enter a new migration token.",
+      "cancel": "Cancel",
+      "disconnect": "Disconnect",
+      "disconnecting": "Disconnecting...",
+      "error": "There was an error disconnecting",
+      "title": "Disconnect from cloud stack"
     },
     "get-started": {
       "body": "Процесс переноса должен быть запущен из самостоятельного экземпляра Grafana.",
@@ -724,8 +750,22 @@
     },
     "migration-token": {
       "body": "Экземпляр вашего самоуправляемого Grafana потребует специального токена аутентификации для безопасного подключения к этому стеку.",
+      "delete-modal-body": "If you've already used this token with a self-managed installation, that installation will no longer be able to upload content.",
+      "delete-modal-cancel": "Cancel",
+      "delete-modal-confirm": "Delete",
+      "delete-modal-deleting": "Deleting...",
+      "delete-modal-title": "Delete migration token",
+      "error-body": "Unable to generate a migration token. Please try again later.",
+      "error-title": "Something went wrong",
       "generate-button": "Создать токен миграции",
-      "status": "Текущий статус: {{tokenStatus}}",
+      "generate-button-loading": "Generating a migration token...",
+      "modal-close": "Close",
+      "modal-copy-and-close": "Copy to clipboard and close",
+      "modal-copy-button": "Copy to clipboard",
+      "modal-field-description": "Copy the token now as you will not be able to see it again. Losing a token requires creating a new one.",
+      "modal-field-label": "Token",
+      "modal-title": "Migration token created",
+      "status": "Current status: <1></1>",
       "title": "Токен миграции"
     },
     "pdc": {
@@ -737,6 +777,37 @@
       "body": "Grafana Cloud имеет 14-дневную пробную версию. По истечении срока пробной версии вам будет предложено использование платного тарифа.",
       "link-title": "Цены на облако в Grafana",
       "title": "Сколько это стоит?"
+    },
+    "resource-status": {
+      "error-details-button": "Details",
+      "failed": "Error",
+      "migrated": "Uploaded to cloud",
+      "migrating": "Uploading...",
+      "not-migrated": "Not yet uploaded",
+      "unknown": "Unknown"
+    },
+    "resource-table": {
+      "unknown-datasource-title": "Data source {{datasourceUID}}",
+      "unknown-datasource-type": "Unknown data source"
+    },
+    "resource-type": {
+      "dashboard": "Dashboard",
+      "datasource": "Data source",
+      "folder": "Folder",
+      "unknown": "Unknown"
+    },
+    "summary": {
+      "disconnect": "Disconnect",
+      "disconnect-error-description": "See the Grafana server logs for more details",
+      "disconnect-error-title": "There was an error disconnecting",
+      "run-migration-error-description": "See the Grafana server logs for more details",
+      "run-migration-error-title": "There was an error migrating your resources",
+      "start-migration": "Upload everything",
+      "target-stack-title": "Uploading to"
+    },
+    "token-status": {
+      "active": "Token created and active",
+      "no-active": "No active token"
     },
     "what-is-cloud": {
       "body": "Облако Grafana - это полностью управляемая облачная платформа для наблюдения, идеальная для использования в облачных средах. Все что вам нравится в Grafana без накладных расходов на обслуживание, обновление и поддержку установки.",
@@ -1150,6 +1221,11 @@
       "title": "Плейлисты ещё не созданы"
     }
   },
+  "playlists": {
+    "empty-state": {
+      "message": "No playlists found"
+    }
+  },
   "profile": {
     "change-password": {
       "cancel-button": "Отменить",
@@ -1163,7 +1239,8 @@
       "new-password-same-as-old": "Новый пароль должен отличаться от старого.",
       "old-password-label": "Старый пароль",
       "old-password-required": "Требуется ввод старого пароля",
-      "passwords-must-match": "Пароли должны совпадать"
+      "passwords-must-match": "Пароли должны совпадать",
+      "strong-password-validation-register": "Password does not comply with the strong password policy"
     }
   },
   "public-dashboard": {
@@ -1284,11 +1361,12 @@
     "header": {
       "collapse-row": "Свернуть строку запросов",
       "datasource-help": "Справка по источнику данных",
-      "disable-query": "Отключить запрос",
       "drag-and-drop": "Нажмите и перетащите, чтобы изменить порядок",
       "duplicate-query": "Дублировать запрос",
       "expand-row": "Развернуть строку запроса",
+      "hide-response": "Hide response",
       "remove-query": "Удалить запрос",
+      "show-response": "Show response",
       "toggle-edit-mode": "Переключить режим изменения текста"
     },
     "query-editor-not-exported": "Плагин источника данных не экспортирует компонент редактора запросов"
@@ -1398,10 +1476,10 @@
       "expire-day": "1 день",
       "expire-hour": "1 час",
       "expire-never": "Никогда",
-      "expire-week": "7 дней",
+      "expire-week": "1 Week",
       "info-text-1": "Снимок — это мгновенный способ опубликовать информационную панель. При создании мы удаляем конфиденциальные данные, такие как запросы (метрики, шаблоны и аннотации) и ссылки на панели, оставляя на информационной панели только видимые данные показателей и имена серий.",
       "info-text-2": "Помните, что ваш снимок <1>может просмотреть любой</1>, у которого есть ссылка и доступ к URL-адресу. Делитесь с умом.***",
-      "local-button": "Локальный снапшот",
+      "local-button": "Publish Snapshot",
       "mistake-message": "Вы ошиблись? ",
       "name": "Имя снапшота",
       "timeout": "Таймаут (в секундах)",
