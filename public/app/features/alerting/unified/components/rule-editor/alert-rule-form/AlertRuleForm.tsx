@@ -11,17 +11,25 @@ import { useAppNotification } from 'app/core/copy/appNotification';
 import { contextSrv } from 'app/core/core';
 import { useCleanup } from 'app/core/hooks/useCleanup';
 import { useQueryParams } from 'app/core/hooks/useQueryParams';
+import InfoPausedRule from 'app/features/alerting/unified/components/InfoPausedRule';
+import { isGrafanaRulerRule, isGrafanaRulerRulePaused } from 'app/features/alerting/unified/utils/rules';
 import { useDispatch } from 'app/types';
 import { RuleWithLocation } from 'app/types/unified-alerting';
 
-import { LogMessages, logInfo, trackNewAlerRuleFormError } from '../../../Analytics';
+import {
+  LogMessages,
+  logInfo,
+  trackAlertRuleFormError,
+  trackAlertRuleFormCancelled,
+  trackAlertRuleFormSaved,
+} from '../../../Analytics';
 import { useUnifiedAlertingSelector } from '../../../hooks/useUnifiedAlertingSelector';
 import { deleteRuleAction, saveRuleFormAction } from '../../../state/actions';
 import { RuleFormType, RuleFormValues } from '../../../types/rule-form';
 import { initialAsyncRequestState } from '../../../utils/redux';
 import {
   MANUAL_ROUTING_KEY,
-  MINUTE,
+  DEFAULT_GROUP_EVALUATION_INTERVAL,
   formValuesFromExistingRule,
   getDefaultFormValues,
   getDefaultQueries,
@@ -51,7 +59,7 @@ export const AlertRuleForm = ({ existing, prefill }: Props) => {
   const notifyApp = useAppNotification();
   const [queryParams] = useQueryParams();
   const [showEditYaml, setShowEditYaml] = useState(false);
-  const [evaluateEvery, setEvaluateEvery] = useState(existing?.group.interval ?? MINUTE);
+  const [evaluateEvery, setEvaluateEvery] = useState(existing?.group.interval ?? DEFAULT_GROUP_EVALUATION_INTERVAL);
 
   const routeParams = useParams<{ type: string; id: string }>();
   const ruleType = translateRouteParamToRuleType(routeParams.type);
@@ -109,6 +117,9 @@ export const AlertRuleForm = ({ existing, prefill }: Props) => {
       notifyApp.error(conditionErrorMsg);
       return;
     }
+
+    trackAlertRuleFormSaved({ formAction: existing ? 'update' : 'create', ruleType: values.type });
+
     // when creating a new rule, we save the manual routing setting in local storage
     if (!existing) {
       if (values.manualRouting) {
@@ -154,20 +165,21 @@ export const AlertRuleForm = ({ existing, prefill }: Props) => {
   };
 
   const onInvalid: SubmitErrorHandler<RuleFormValues> = (errors): void => {
-    if (!existing) {
-      trackNewAlerRuleFormError({
-        grafana_version: config.buildInfo.version,
-        org_id: contextSrv.user.orgId,
-        user_id: contextSrv.user.id,
-        error: Object.keys(errors).toString(),
-      });
-    }
+    trackAlertRuleFormError({
+      grafana_version: config.buildInfo.version,
+      org_id: contextSrv.user.orgId,
+      user_id: contextSrv.user.id,
+      error: Object.keys(errors).toString(),
+      formAction: existing ? 'update' : 'create',
+    });
     notifyApp.error('There are errors in the form. Please correct them and try again!');
   };
 
   const cancelRuleCreation = () => {
     logInfo(LogMessages.cancelSavingAlertRule);
+    trackAlertRuleFormCancelled({ formAction: existing ? 'update' : 'create' });
   };
+
   const evaluateEveryInForm = watch('evaluateEvery');
   useEffect(() => setEvaluateEvery(evaluateEveryInForm), [evaluateEveryInForm]);
 
@@ -220,11 +232,13 @@ export const AlertRuleForm = ({ existing, prefill }: Props) => {
     </HorizontalGroup>
   );
 
+  const isPaused = existing && isGrafanaRulerRule(existing.rule) && isGrafanaRulerRulePaused(existing.rule);
   return (
     <FormProvider {...formAPI}>
       <AppChromeUpdate actions={actionButtons} />
       <form onSubmit={(e) => e.preventDefault()} className={styles.form}>
         <div className={styles.contentOuter}>
+          {isPaused && <InfoPausedRule />}
           <CustomScrollbar autoHeightMin="100%" hideHorizontalTrack={true}>
             <Stack direction="column" gap={3}>
               {/* Step 1 */}
@@ -305,7 +319,7 @@ function formValuesFromQueryParams(ruleDefinition: string, type: RuleFormType): 
     annotations: normalizeDefaultAnnotations(ruleFromQueryParams.annotations ?? []),
     queries: ruleFromQueryParams.queries ?? getDefaultQueries(),
     type: type || RuleFormType.grafana,
-    evaluateEvery: MINUTE,
+    evaluateEvery: DEFAULT_GROUP_EVALUATION_INTERVAL,
   });
 }
 
@@ -329,6 +343,7 @@ const getStyles = (theme: GrafanaTheme2) => ({
   contentOuter: css({
     background: theme.colors.background.primary,
     overflow: 'hidden',
+    maxWidth: theme.breakpoints.values.xl,
     flex: 1,
   }),
   flexRow: css({
