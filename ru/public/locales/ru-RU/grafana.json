@@ -129,7 +129,7 @@
   "connections": {
     "connect-data": {
       "category-header-label": "Источники данных",
-      "empty-message": "No results matching your query were found"
+      "empty-message": "По запросу ничего не найдено"
     },
     "search": {
       "placeholder": "Искать по всем"
@@ -562,7 +562,7 @@
       "close": "Закрыть"
     },
     "empty-state": {
-      "not-found-message": "No results found"
+      "not-found-message": "Результаты не найдены"
     },
     "modal": {
       "close-tooltip": "Закрыть"
@@ -652,7 +652,7 @@
   },
   "library-panels": {
     "empty-state": {
-      "message": "No library panels found"
+      "message": "Не найдено в библиотеке панелей"
     },
     "modal": {
       "body_one": "Эта панель используется в панели управления {{count}}. Пожалуйста, выберите панель управления для просмотра в следующих случаях:",
@@ -701,31 +701,31 @@
       "title": "Могу ли я перенести установку в Облако Grafana?"
     },
     "connect-modal": {
-      "body-cloud-stack": "You'll also need a cloud stack. If you just signed up, we'll automatically create your first stack. If you have an account, you'll need to select or create a stack.",
-      "body-get-started": "To get started, you'll need a Grafana.com account.",
-      "body-sign-up": "Sign up for a Grafana.com account",
-      "body-token": "Your self-managed Grafana installation needs special access to securely migrate content. You'll need to create a migration token on your chosen cloud stack.",
-      "body-token-field": "Migration token",
-      "body-token-field-placeholder": "Paste token here",
-      "body-token-instructions": "Log into your cloud stack and navigate to Administration, General, Migrate to Grafana Cloud. Create a migration token on that screen and paste the token here.",
-      "body-view-stacks": "View my cloud stacks",
-      "cancel": "Cancel",
-      "connect": "Connect to this stack",
-      "connecting": "Connecting to this stack...",
-      "title": "Connect to a cloud stack",
-      "token-required-error": "Migration token is required"
+      "body-cloud-stack": "Вам также понадобится стек облака. Если вы только что зарегистрировались, мы автоматически создадим ваш первый стек. Если у вас есть учетная запись, вам нужно выбрать или создать стек.",
+      "body-get-started": "Чтобы начать, вам необходим аккаунт на Grafana.com",
+      "body-sign-up": "Зарегистрируйте аккаунт на Grafana.com",
+      "body-token": "Установленная вами версия Grafana нуждается в специальном доступе для безопасного переноса контента. Вам нужно создать токен миграции в выбранном облачном стеке.",
+      "body-token-field": "Токен миграции",
+      "body-token-field-placeholder": "Введите токен здесь",
+      "body-token-instructions": "Войдите в свой облачный стек и перейдите в администрирование, генерацию, переместите в Облако Grafa. Создайте маркер миграции на этом экране и вставьте токен здесь.",
+      "body-view-stacks": "Посмотреть мои облачные стеки",
+      "cancel": "Отменить",
+      "connect": "Подключиться к этому сайту",
+      "connecting": "Подключение к этому сайту...",
+      "title": "Подключиться к этому облачному сайту",
+      "token-required-error": "Требуется токен миграции"
     },
     "cta": {
       "button": "Перенести этот экземпляр в Облако",
       "header": "Позвольте нам управлять стеком Grafana"
     },
     "disconnect-modal": {
-      "body": "This will remove the migration token from this installation. If you wish to upload more resources in the future, you will need to enter a new migration token.",
-      "cancel": "Cancel",
-      "disconnect": "Disconnect",
-      "disconnecting": "Disconnecting...",
-      "error": "There was an error disconnecting",
-      "title": "Disconnect from cloud stack"
+      "body": "Это удалит токен миграции из этой установки. Если вы хотите загрузить больше ресурсов в будущем, вам нужно будет ввести новый маркер миграции.",
+      "cancel": "Отмена",
+      "disconnect": "Отключиться",
+      "disconnecting": "Отключение…",
+      "error": "Произошла ошибка при отключении",
+      "title": "Отсоединиться от облачного сайта"
     },
     "get-started": {
       "body": "Процесс переноса должен быть запущен из самостоятельного экземпляра Grafana.",
