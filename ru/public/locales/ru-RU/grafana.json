@@ -750,22 +750,22 @@
     },
     "migration-token": {
       "body": "Экземпляр вашего самоуправляемого Grafana потребует специального токена аутентификации для безопасного подключения к этому стеку.",
-      "delete-modal-body": "If you've already used this token with a self-managed installation, that installation will no longer be able to upload content.",
-      "delete-modal-cancel": "Cancel",
-      "delete-modal-confirm": "Delete",
-      "delete-modal-deleting": "Deleting...",
-      "delete-modal-title": "Delete migration token",
-      "error-body": "Unable to generate a migration token. Please try again later.",
-      "error-title": "Something went wrong",
+      "delete-modal-body": "Если вы уже использовали этот токен при самостоятельной установке, то эта установка больше не сможет загружать контент.",
+      "delete-modal-cancel": "Отменить",
+      "delete-modal-confirm": "Удалить",
+      "delete-modal-deleting": "Удаление...",
+      "delete-modal-title": "Удалить токен миграции",
+      "error-body": "Не удается сгенерировать токен миграции. Пожалуйста, повторите попытку позже.",
+      "error-title": "Что-то пошло не так",
       "generate-button": "Создать токен миграции",
-      "generate-button-loading": "Generating a migration token...",
-      "modal-close": "Close",
-      "modal-copy-and-close": "Copy to clipboard and close",
-      "modal-copy-button": "Copy to clipboard",
-      "modal-field-description": "Copy the token now as you will not be able to see it again. Losing a token requires creating a new one.",
-      "modal-field-label": "Token",
-      "modal-title": "Migration token created",
-      "status": "Current status: <1></1>",
+      "generate-button-loading": "Создание токена миграции...",
+      "modal-close": "Закрыть",
+      "modal-copy-and-close": "Копировать в буфер обмена и закрыть",
+      "modal-copy-button": "Копировать в буфер обмена",
+      "modal-field-description": "Скопируйте токен сейчас, так как вы больше не сможете его увидеть. Потеря токена требует создания нового.",
+      "modal-field-label": "Токен",
+      "modal-title": "Токен миграции создан",
+      "status": "Текущий статус: <1></1>",
       "title": "Токен миграции"
     },
     "pdc": {
@@ -779,35 +779,35 @@
       "title": "Сколько это стоит?"
     },
     "resource-status": {
-      "error-details-button": "Details",
-      "failed": "Error",
-      "migrated": "Uploaded to cloud",
-      "migrating": "Uploading...",
-      "not-migrated": "Not yet uploaded",
-      "unknown": "Unknown"
+      "error-details-button": "Подробная информация",
+      "failed": "Ошибка",
+      "migrated": "Загружено в облако",
+      "migrating": "Загрузка...",
+      "not-migrated": "Еще не загружен",
+      "unknown": "Неизвестен"
     },
     "resource-table": {
-      "unknown-datasource-title": "Data source {{datasourceUID}}",
-      "unknown-datasource-type": "Unknown data source"
+      "unknown-datasource-title": "Источник данных {{datasourceUID}}",
+      "unknown-datasource-type": "Неизвестный источник данных"
     },
     "resource-type": {
-      "dashboard": "Dashboard",
-      "datasource": "Data source",
-      "folder": "Folder",
-      "unknown": "Unknown"
+      "dashboard": "Информационная панель",
+      "datasource": "Источник данных",
+      "folder": "Папка",
+      "unknown": "Неизвестен"
     },
     "summary": {
-      "disconnect": "Disconnect",
-      "disconnect-error-description": "See the Grafana server logs for more details",
-      "disconnect-error-title": "There was an error disconnecting",
-      "run-migration-error-description": "See the Grafana server logs for more details",
-      "run-migration-error-title": "There was an error migrating your resources",
-      "start-migration": "Upload everything",
-      "target-stack-title": "Uploading to"
+      "disconnect": "Отключиться",
+      "disconnect-error-description": "Смотрите журналы сервера Grafana для получения более подробной информации",
+      "disconnect-error-title": "Произошла ошибка при отключении",
+      "run-migration-error-description": "Смотрите журналы сервера Grafana для получения более подробной информации",
+      "run-migration-error-title": "Произошла ошибка при миграции ваших ресурсов",
+      "start-migration": "Загрузить всё",
+      "target-stack-title": "Загрузка в"
     },
     "token-status": {
-      "active": "Token created and active",
-      "no-active": "No active token"
+      "active": "Токен создан и активен",
+      "no-active": "Нет активных токенов"
     },
     "what-is-cloud": {
       "body": "Облако Grafana - это полностью управляемая облачная платформа для наблюдения, идеальная для использования в облачных средах. Все что вам нравится в Grafana без накладных расходов на обслуживание, обновление и поддержку установки.",
@@ -1223,7 +1223,7 @@
   },
   "playlists": {
     "empty-state": {
-      "message": "No playlists found"
+      "message": "Плейлисты не найдены"
     }
   },
   "profile": {
@@ -1240,7 +1240,7 @@
       "old-password-label": "Старый пароль",
       "old-password-required": "Требуется ввод старого пароля",
       "passwords-must-match": "Пароли должны совпадать",
-      "strong-password-validation-register": "Password does not comply with the strong password policy"
+      "strong-password-validation-register": "Пароль не соответствует правилам надежного пароля"
     }
   },
   "public-dashboard": {
@@ -1364,9 +1364,9 @@
       "drag-and-drop": "Нажмите и перетащите, чтобы изменить порядок",
       "duplicate-query": "Дублировать запрос",
       "expand-row": "Развернуть строку запроса",
-      "hide-response": "Hide response",
+      "hide-response": "Скрыть ответ",
       "remove-query": "Удалить запрос",
-      "show-response": "Show response",
+      "show-response": "Показать ответ",
       "toggle-edit-mode": "Переключить режим изменения текста"
     },
     "query-editor-not-exported": "Плагин источника данных не экспортирует компонент редактора запросов"
@@ -1476,10 +1476,10 @@
       "expire-day": "1 день",
       "expire-hour": "1 час",
       "expire-never": "Никогда",
-      "expire-week": "1 Week",
+      "expire-week": "1 Неделя",
       "info-text-1": "Снимок — это мгновенный способ опубликовать информационную панель. При создании мы удаляем конфиденциальные данные, такие как запросы (метрики, шаблоны и аннотации) и ссылки на панели, оставляя на информационной панели только видимые данные показателей и имена серий.",
       "info-text-2": "Помните, что ваш снимок <1>может просмотреть любой</1>, у которого есть ссылка и доступ к URL-адресу. Делитесь с умом.***",
-      "local-button": "Publish Snapshot",
+      "local-button": "Опубликовать снимок",
       "mistake-message": "Вы ошиблись? ",
       "name": "Имя снапшота",
       "timeout": "Таймаут (в секундах)",
