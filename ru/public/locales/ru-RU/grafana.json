@@ -1,5 +1,5 @@
 {
-  "_comment": "Этот файл является источником истины для русских строк. Отредактируйте его, чтобы изменить множественное числа и другие фразы для пользовательского интерфейса.",
+  "_comment": "This file is the source of truth for Russian strings.",
   "access-control": {
     "add-permission": {
       "role-label": "Роль",
