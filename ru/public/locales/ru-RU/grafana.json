@@ -104,7 +104,7 @@
   },
   "command-palette": {
     "action": {
-      "change-theme": "Сменить тему",
+      "change-theme": "Сменить тему...",
       "dark-theme": "Темная тема",
       "light-theme": "Светлая тема"
     },
